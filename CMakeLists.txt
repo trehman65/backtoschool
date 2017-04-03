@@ -11,8 +11,10 @@ set(SOURCE_FILES image-histogram.h
         image-histogram.h
         TextDistanceInterface.h)
 
-add_executable(Segmentation main-segmentation.cpp ${SOURCE_FILES})
+add_executable(Segmentation main-segmentation-hw.cpp ${SOURCE_FILES})
 add_executable(Evaluation main-evaluation.cpp ${SOURCE_FILES})
+add_executable(Machineprinted main-machine-printed.cpp ${SOURCE_FILES})
 
 target_link_libraries(Segmentation lept tesseract opencv_core opencv_imgproc opencv_highgui opencv_imgcodecs pthread ${Boost_LIBRARIES})
 target_link_libraries(Evaluation lept tesseract opencv_core opencv_imgproc opencv_highgui opencv_imgcodecs pthread ${Boost_LIBRARIES})
+target_link_libraries(Machineprinted lept tesseract opencv_core opencv_imgproc opencv_highgui opencv_imgcodecs pthread ${Boost_LIBRARIES})

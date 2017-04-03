@@ -63,7 +63,8 @@ void findLineBoxes(const Mat &greyImage, vector<Rect> &resultantBoxes) {
     // Convert image to binary
     Mat imgShahrukh;
     Mat temp;
-    binarizeBG(greyImage2,temp, imgShahrukh);
+
+   // binarizeBG(greyImage2,temp, imgShahrukh);
 
     binarizeShafait(greyImage2, imgShahrukh, 50, 0.30);
 
